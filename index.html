@@ -118,6 +118,22 @@ footer button{border:0;background:none;color:var(--soft);text-decoration:underli
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,calc(100% + 60px));background:var(--dark);color:#fff;padding:14px 22px;border-radius:16px;font-size:22px;transition:transform .35s;z-index:20;max-width:90vw;text-align:center}
 .toast.show{transform:translate(-50%,0)}
 
+.payoff{margin:26px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:22px 18px 18px}
+.payoff .hon{margin:0 0 10px;font-weight:700;color:var(--soft);font-size:15px}
+.payoff .num{font-size:clamp(96px,30vw,160px);line-height:.85;color:var(--coral)}
+.payoff .numl{font-size:clamp(24px,6.5vw,34px);line-height:1;color:var(--head);margin:18px 0 14px}
+.payoff .garden{margin:0 0 14px}
+.mlist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.mlist li{background:var(--surface-2);border-radius:14px;padding:12px 14px;display:flex;gap:12px;align-items:baseline}
+.mlist li b{color:var(--head);min-width:6.2em;font-size:18px;font-weight:400}
+.hint{margin:0;color:var(--soft);font-size:15px}
+.opener{background:#22343b;--qi:#e8f0ec}
+.opener .q{font-size:clamp(34px,10vw,58px)}
+.opener .bw{display:block;color:#b9c4c2;line-height:.95}
+.opener .hi{display:block;color:#fff;margin-top:14px;line-height:1}
+.opener .color{display:block;font-size:2.9em;line-height:.88;letter-spacing:-.01em}
+.opener .color i{font-style:normal}
+.opener cite{color:#e8f0ec}
 .fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;border:0;border-radius:999px;background:var(--coral);color:var(--dark);font-size:21px;padding:13px 20px;box-shadow:0 6px 18px rgba(34,52,59,.28)}
 footer{padding-bottom:110px !important}
 .ways{padding:4px 0 10px}
@@ -150,9 +166,8 @@ footer{padding-bottom:110px !important}
   <header class="top"><img src="data:image/png;base64,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" alt=""><span class="d">Make Them Feel</span></header>
   <div id="app"></div>
   <footer>
-    <p>Huddle in two minutes: say the feeling, read the quote, give the mission.</p>
-    <p>The saying is a $30 experience on a $15 plate. How they feel is how we get there.</p>
-    <button id="reset">Start over</button>
+    <p>Huddle in two minutes: say the feeling, read the quote, give the mission. Phones stay off the floor. Log it after your shift.</p>
+        <button id="reset">Start over</button>
   </footer>
 </div>
 <button class="fab d" id="fab">111 ways</button>
@@ -161,6 +176,7 @@ footer{padding-bottom:110px !important}
 <script>
 const ROLES=[["host","Host"],["server","Server"],["boh","BOH"],["manager","Manager"]];
 const RANKS=[[0,"Seed"],[10,"Sprout"],[25,"Bloom"],[50,"Belle"]];
+const OPEN='<blockquote class="q d"><span class="bw">Service is<br>black and white.</span><span class="hi">Hospitality is</span><span class="color"><i style="color:#99C961">C</i><i style="color:#ffde5c">O</i><i style="color:#fbaf41">L</i><i style="color:#fc826d">O</i><i style="color:#f46e3b">R</i><i style="color:#9bc4bc">.</i></span><cite>Will Guidara</cite></blockquote>';
 const LEAD='<p class="q d"><span class="w">People don’t care how much you know until they know how much </span><span class="big">you care.</span></p>';
 const D=[
  {w:"Welcome",f:"welcome",bg:"#fc826d",pi:"#22343b",pe:"#ffffff",
@@ -168,11 +184,11 @@ const D=[
   host:"Hello before they reach the stand. Like they walked into your home.",server:"Warmth before menus. Get to them fast.",boh:"The plate is the kitchen’s hello. Make it say welcome.",manager:"Work the door at peak. Greet every regular by name.",
   n:5,dare:"Greet every teammate by name when they walk in."},
  {w:"Seen",f:"seen",bg:"#3c5c68",pi:"#e8f0ec",pe:"#ffde5c",
-  q:"Service is a constant process of *discovery*.",by:"Mark Ursino",
+  q:"The guest feels *seen* before they ask for *anything*.",by:"Morning Belle",
   host:"Notice one thing about every guest. Pass it to the server.",server:"Collect one detail at every table. Use it.",boh:"Read every ticket like a person is waiting. One is.",manager:"Teach one regular’s name to a newer Gardener.",
   n:5,dare:"Tell a teammate one thing they do great."},
  {w:"Understood",f:"understood",bg:"#99C961",pi:"#22343b",pe:"#ffffff",
-  q:"*Ask them*, and they will *tell you*.",by:"",
+  q:"Don’t guess what they want. *Ask them*. They will *tell you*.",by:"Morning Belle",
   host:"Seat the table, not the next open spot.",server:"Ask. Listen. Then set the pace they want.",boh:"A mod is someone’s whole meal. Get it right.",manager:"Coach every handoff until nobody has to think about it.",
   n:5,dare:"Ask a teammate how they like to be helped."},
  {w:"Cared for",f:"cared for",bg:"#fbaf41",pi:"#22343b",pe:"#ffffff",
@@ -180,7 +196,7 @@ const D=[
   host:"High chair and crayons waiting before the family sits.",server:"Coffee topped before it’s low. Box before they ask.",boh:"Tell FOH it’s running low before they ring it.",manager:"Every guest ask is a signal. Kill the top three.",
   n:5,dare:"Bring a teammate what they need before they ask."},
  {w:"Delighted",f:"delighted",bg:"#f46e3b",pi:"#22343b",pe:"#ffffff",
-  q:"*Success* doesn’t happen by *accident*.",by:"Mac Anderson",
+  q:"The plate is a *promise*. Every ticket is a *person*.",by:"Morning Belle",
   host:"Pace the room so the kitchen can win.",server:"Ring it right. Run it hot.",boh:"If it isn’t right, it doesn’t leave.",manager:"Own the window at peak. Thank the line by name.",
   n:5,dare:"Thank someone on the other side of the window, by name."},
  {w:"Special",f:"special",bg:"#d57136",pi:"#22343b",pe:"#ffffff",
@@ -188,7 +204,7 @@ const D=[
   host:"Catch the occasion at the door. Pass it on.",server:"Use a detail you collected. Make it only theirs.",boh:"Flagged occasion? Best plate on the line.",manager:"Run the 95/5. Tight on the 95. Generous on the last 5.",
   n:2,dare:"Surprise a teammate."},
  {w:"They belong",f:"they belong",bg:"#9bc4bc",pi:"#22343b",pe:"#ffffff",team:true,
-  q:"Happiness consists in *giving*, and in *serving* others.",by:"Henry Drummond",
+  q:"No Gardener carries the weight *alone*.",by:"Morning Belle",
   host:"Door quiet? Bus, run, refill.",server:"Run any plate in the window. Not just yours.",boh:"Help the next station before it falls behind.",manager:"How your team feels is how your guests feel.",
   n:5,dare:"Ask a newer Gardener how they’re really doing."},
  {w:"Heard",f:"heard",bg:"#4d4d4d",pi:"#e8ecea",pe:"#ffde5c",
@@ -196,7 +212,7 @@ const D=[
   host:"Update waiting guests before they have to ask.",server:"Believe. Listen. Apologize. Solve. Thank.",boh:"Remakes jump the line. No questions. No attitude.",manager:"Every recovery table gets you, in person.",
   n:5,dare:"Really listen to a teammate. No fixing."},
  {w:"Calm",f:"calm",bg:"#3c5c68",pi:"#e8f0ec",pe:"#99C961",
-  q:"Your *attitude* will determine your *altitude*.",by:"Zig Ziglar",
+  q:"When the room gets loud, be the *calm* they came in *for*.",by:"Morning Belle, after Will Guidara",
   host:"Longer wait, slower hello. Never rushed.",server:"Slammed? Slow your voice. Ask for help early.",boh:"Spec doesn’t care about ticket count.",manager:"Five tables max at peak. Your calm is contagious.",
   n:5,dare:"Ask for help before you need it."},
  {w:"Remembered",f:"remembered",bg:"#ffde5c",pi:"#3c5c68",pe:"#f46e3b",
@@ -339,7 +355,7 @@ const rank=()=>{const t=guests()+mates();let r=RANKS[0];for(const x of RANKS)if(
 function fit(){const w=document.querySelector(".word");if(!w)return;const cs=getComputedStyle(w.parentElement);const box=w.parentElement.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);w.style.fontSize="200px";const s=Math.min(200,200*box/w.scrollWidth*0.98);w.style.fontSize=s+"px"}
 
 function onboard(){
-  app.innerHTML=`<section class="open">${LEAD}</section>
+  app.innerHTML=`<section class="open opener">${OPEN}</section>
   <section class="form">
     <p class="lede">Ten days. Ten feelings. Every guest. Every teammate. Every shift.</p>
     <div class="field"><label for="nm">Your first name</label><input id="nm" autocomplete="given-name" value="${esc(S.name)}"></div>
@@ -358,7 +374,7 @@ function renderWays(){
   const chips=[[-2,"All 111"],...D.map((d,i)=>[i,d.w])];
   app.innerHTML=`<section class="ways">
     <h1 class="d wh">111 ways to make them feel something</h1>
-    <p class="wsub">Guests and teammates. Tap a way when you’ve done it. <b>${S.ways.length} of 111</b> done${S.name?`, ${esc(S.name)}`:""}.</p>
+    <p class="wsub">Guests and teammates. After your shift, check off the ways you did. <b>${S.ways.length} of 111</b> done${S.name?`, ${esc(S.name)}`:""}.</p>
     <button class="go d" id="pick">Give me one</button>
     ${wpick>=0?`<div class="picked"><span class="d">${wpick+1}</span><p>${WAYS[wpick][2]}</p></div>`:""}
     <div class="chips" role="group" aria-label="Filter by feeling">${chips.map(([v,l])=>`<button class="chip" data-f="${v}" aria-pressed="${wf===v}">${l}</button>`).join("")}</div>
@@ -378,21 +394,11 @@ function setView(v){view=v;try{history.replaceState(null,"",v==="ways"?"#ways":"
 function render(){
   if(view==="ways")return renderWays();
   if(!S.name)return onboard();
-  const d=D[cur-1],st=S.days[cur-1],role=ROLES.find(r=>r[0]===S.role),rk=rank(),ready=st.c>=d.n&&st.dare;
+  const d=D[cur-1],st=S.days[cur-1],role=ROLES.find(r=>r[0]===S.role),ready=st.c>=d.n&&st.dare;
   const all=S.days.every(x=>x.planted);
   const moments=S.days.map((x,i)=>x.moment?`<li><b class="d">${D[i].w}</b><span>${esc(x.moment)}</span></li>`:"").join("");
   const task=d.team?`Make ${d.n} teammates feel ${d.f}.`:`Make ${d.n} ${d.n===1?"guest":"guests"} feel ${d.f}.`;
   app.innerHTML=`
-  <section class="me">
-    <h1 class="d">${esc(S.name)}, how will they feel today?</h1>
-    <div class="stats">
-      <div class="stat"><b class="d">${guests()}</b><span>Guests</span></div>
-      <div class="stat"><b class="d">${mates()}</b><span>Teammates</span></div>
-      <div class="stat"><b class="d">${rk.r}</b><span>Your rank</span></div>
-    </div>
-    <p class="next">${rk.nx?`${rk.nx[0]-rk.t} more people to ${rk.nx[1]}.`:"Belle. The top of the garden."}</p>
-    <div class="garden"><div class="plots">${plots()}</div></div>
-  </section>
   ${all?`<section class="open finale">${LEAD}</section>`:""}
   <article class="day">
     <div class="panel" style="--pbg:${d.bg};--pi:${d.pi};--pe:${d.pe}">
@@ -407,7 +413,7 @@ function render(){
         ${showAll?`<div class="team">${ROLES.filter(r=>r[0]!==S.role).map(r=>`<div class="mate"><p class="k">${r[1]}</p><p>${d[r[0]]}</p></div>`).join("")}</div>`:""}
       </div>
       <div class="mission">
-        <p class="k">Today’s mission</p>
+        <p class="k">Today’s mission. Log it after your shift.</p>
         <p class="task d">${task}</p>
         <div class="counter">
           <button class="plus d" id="plus" aria-label="Add one">+1</button>
@@ -418,12 +424,18 @@ function render(){
       </div>
       <button class="dare" id="dare" aria-pressed="${st.dare}"><span class="box">${st.dare?"✓":""}</span><span><span class="k" style="display:block">Make a teammate feel ${d.f}</span><span class="t">${d.dare}</span></span></button>
       <div class="moment"><label class="k" for="mo">${cur===10?"What I want to be remembered for":"The moment I’ll remember"}</label><input id="mo" maxlength="140" value="${esc(st.moment)}" placeholder="${cur===10?"The one thing every guest gets from me":"Who it was for, and what you did"}"></div>
-      <button class="plant${st.planted?" planted":""}${(ready||st.planted)?" d":""}" id="plant" ${!ready&&!st.planted?"disabled":""}>${st.planted?`${d.w}. Planted.`:ready?`Plant ${d.w}`:"Finish the mission and the teammate dare to plant"}</button>
+      <button class="plant${st.planted?" planted":""}${(ready||st.planted)?" d":""}" id="plant" ${!ready&&!st.planted?"disabled":""}>${st.planted?`${d.w}. Planted.`:ready?`Plant ${d.w}`:"After your shift, log the mission and the teammate dare to plant"}</button>
       <button class="team-toggle" id="more">11 more ways to make them feel ${d.f}</button>
       <div class="nav"><button id="prev" ${cur===1?"disabled":""}>Previous</button><button id="next" ${cur===10?"disabled":""}>Next</button></div>
     </div>
   </article>
-  ${moments?`<section class="moments"><h2 class="d">The people you made feel something</h2><ol>${moments}</ol></section>`:""}`;
+  <section class="payoff">
+    <p class="hon">For the Gardener who does the small thing nobody asked for.</p>
+    <div class="num d">${guests()+mates()}</div>
+    <p class="numl d">${esc(S.name)}, the people you made feel something</p>
+    <div class="garden"><div class="plots">${plots()}</div></div>
+    ${moments?`<ol class="mlist">${moments}</ol>`:'<p class="hint">Every moment you write down lands here.</p>'}
+  </section>`;
   fit();
   document.getElementById("tt").onclick=()=>{showAll=!showAll;render()};
   document.getElementById("more").onclick=()=>{wf=cur-1;wpick=-1;setView("ways")};
